@@ -1,0 +1,13 @@
+<main>
+  <div class="post" *ngFor="let post of allPosts">
+    <div class="title">
+      <span>Title</span>
+      <span>{{ post.title }}</span>
+    </div>
+
+    <div class="desc">
+      <span>Description</span>
+      <span>{{ post.body }}</span>
+    </div>
+  </div>
+</main>

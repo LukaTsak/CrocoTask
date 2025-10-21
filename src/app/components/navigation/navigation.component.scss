@@ -1,0 +1,39 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100px;
+  height: 100%;
+  background-color: #242424;
+  color: white;
+  .navigationText {
+    width: 100%;
+    height: 78px;
+    // border: 1px solid black;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 78px;
+    }
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    // gap: 10px;
+    .option {
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    //   border: 1px solid black;
+    //   border-radius: 10px;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

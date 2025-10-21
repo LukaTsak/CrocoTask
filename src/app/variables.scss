@@ -1,0 +1,24 @@
+// ===== Dark Base =====
+$color-bg-dark: #121212;        // Main background
+$color-surface: #1e1e1e;        // Cards, panels
+$color-elevated: #242424;       // Elevated elements (hover, modals)
+
+// ===== Text =====
+$color-text-primary: #e0e0e0;   // Main text
+$color-text-secondary: #b0b0b0; // Muted text
+$color-text-disabled: #6e6e6e;  // Disabled / low contrast
+
+// ===== Accents =====
+$color-accent: #3f8efc;         // Primary accent (buttons, links)
+$color-accent-hover: #5fa1ff;   // Hover accent
+$color-success: #00c896;        // Success green
+$color-warning: #ffb300;        // Warning yellow
+$color-error: #ff4b5c;          // Error red
+
+// ===== Borders and Dividers =====
+$color-border: #333333;
+$color-divider: #2a2a2a;
+
+// ===== Shadows =====
+$shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.3);
+$shadow-strong: 0 4px 20px rgba(0, 0, 0, 0.5);

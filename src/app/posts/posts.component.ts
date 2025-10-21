@@ -19,6 +19,7 @@ export class PostsComponent {
   userId: string | null = null;
   allPosts: any[] = [];
   userPosts: any[] = [];
+  cardExpanderId: number | null = null;
 
   ngOnInit() {
     this.route.queryParamMap.subscribe((params) => {
@@ -34,9 +35,19 @@ export class PostsComponent {
     } else if (this.userId == null) {
       this.apiService.getPosts().subscribe((posts) => {
         console.log(posts);
-        this.allPosts.pop()
         this.allPosts = posts as any[];
       });
     }
+  }
+
+  //////// Card Toggle 
+
+  isExpanded = false;
+
+  toggleCard(id?: number) {
+    this.isExpanded = !this.isExpanded;
+    this.cardExpanderId = id || null;
+
+    console.log('Toggled card with ID:', id);
   }
 }

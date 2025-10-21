@@ -1,28 +1,87 @@
-main{
-    width: 100%;
-    height: 100%;
+main {
+  padding: 20px;
+  //   min-width: 100%;
+  //   width: fit-content;
+  min-height: 100vh;
+  height: fit-content;
+  background-color: #4b4a4a;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  flex-wrap: wrap;
+  .post {
     background-color: #121212;
+    cursor: pointer;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    .post{
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-        display: flex;
-        gap: 30px;
-        flex-direction: column;
-        text-align: center;
-        width: 300px;
-        height: fit-content;
-        border: 1px solid red;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        span{
-            padding: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+    width: 345px;
+    height: 330px;
+    // border: 1px solid red;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
+    &.expanded {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 320px;
+      transform: translate(-50%, -50%) scale(1.1);
+      z-index: 1001;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    }
+    .bolder {
+      color: rgb(146, 119, 161);
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1600px) {
+  main {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    .post {
+      width: 90%;
+      height: auto;
+      &.expanded {
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
 }

@@ -30,6 +30,7 @@ main {
       line-height: 18px;
       padding: 16px;
       .postsButton{
+        max-width: 100px;
         background-color: gray;
         border: none;
         border-radius: 8px;
@@ -66,7 +67,9 @@ main {
     display: none;
   }
   td {
-    display: block;
+    display: grid;
+    grid-template-columns: 15ch auto;
+    gap: 4px;
     padding: 12px !important;
 
     &:before {

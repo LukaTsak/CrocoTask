@@ -34,7 +34,9 @@ export class PostsComponent {
 
       if (this.userId) {
         this.apiService.getPostsById(Number(this.userId)).subscribe((posts) => {
-          this.allPosts.push(posts);
+          this.allPosts = posts as any[];
+          console.log(this.allPosts);
+          console.log(posts);
         });
       } else {
         this.apiService.getPosts().subscribe((posts) => {

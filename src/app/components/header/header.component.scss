@@ -1,14 +1,21 @@
 @use '../../variables.scss' as *;
 header{
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-items: center;
     justify-content: start;
     gap: 20px;
     color: white;
     background-color: $color-bg-input;
     padding:16px;
-    // border-left: 1px solid $color-border;
+    .headderTextDiv{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
     .logo{
         font-size: 30px;
         cursor: pointer;

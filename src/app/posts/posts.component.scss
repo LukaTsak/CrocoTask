@@ -3,8 +3,9 @@ main {
   padding: 20px;
   //   min-width: 100%;
   //   width: fit-content;
-  min-height: 100vh;
-  height: fit-content;
+  // min-height: 100vh;
+  min-height: fit-content;
+  height: auto;
   background-color: $color-bg-main;
   display: flex;
   align-items: start;

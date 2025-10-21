@@ -10,6 +10,7 @@
       <th>Email</th>
       <th>Company name</th>
       <th>posts</th>
+      <th>todos</th>
     </tr>
 
     <tr *ngFor="let user of FilteredUsers">
@@ -25,6 +26,15 @@
           class="postsButton"
         >
           Posts
+        </button>
+      </td>
+      <td data-cell="todos">
+        <button
+          [routerLink]="['/todos']"
+          [queryParams]="{ id: user.id }"
+          class="postsButton"
+        >
+          Todos
         </button>
       </td>
     </tr>

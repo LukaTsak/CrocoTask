@@ -1,13 +1,16 @@
+@use '../../variables.scss' as *;
 header{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     color: white;
-    background-color: #333;
+    background-color: $color-bg-input;
     padding:16px;
+    // border-left: 1px solid $color-border;
     .logo{
         font-size: 30px;
+        cursor: pointer;
     }
     .date{
         display: flex;

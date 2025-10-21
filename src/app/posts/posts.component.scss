@@ -1,17 +1,18 @@
+@use '../variables.scss' as *;
 main {
   padding: 20px;
   //   min-width: 100%;
   //   width: fit-content;
   min-height: 100vh;
   height: fit-content;
-  background-color: #4b4a4a;
+  background-color: $color-bg-main;
   display: flex;
   align-items: start;
   justify-content: start;
   gap: 10px;
   flex-wrap: wrap;
   .post {
-    background-color: #121212;
+    background-color: $color-bg-login;
     cursor: pointer;
     display: flex;
     gap: 30px;

@@ -1,3 +1,4 @@
+@use '../../variables.scss' as *;
 .navigation {
   display: flex;
   flex-direction: column;
@@ -5,7 +6,7 @@
   justify-content: start;
   width: 100px;
   height: 100%;
-  background-color: #242424;
+  background-color: $color-bg-login;
   color: white;
   .navigationText {
     width: 100%;
@@ -34,6 +35,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    span{
+      cursor: pointer;
     }
   }
 }

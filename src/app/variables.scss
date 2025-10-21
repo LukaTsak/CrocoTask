@@ -1,24 +1,29 @@
-// ===== Dark Base =====
-$color-bg-dark: #121212;        // Main background
-$color-surface: #1e1e1e;        // Cards, panels
-$color-elevated: #242424;       // Elevated elements (hover, modals)
+$color-bg-main: #171821;
+$color-bg-login: #21222d;
+$color-bg-input: #1d1e26;
+$color-bg-hover: #171821;
+$color-primary: rgb(115, 202, 190);
+$color-primary-light: rgb(169, 223, 216);
+$color-secondary: rgb(135, 136, 140);
+$color-light-gray: rgb(210, 210, 210);
+$color-checkbox-bg: #87888c;
+$color-white: #ffffff;
+$color-shadow: rgba(0, 0, 0, 0.3);
+$color-border: rgb(44, 45, 51);
 
-// ===== Text =====
-$color-text-primary: #e0e0e0;   // Main text
-$color-text-secondary: #b0b0b0; // Muted text
-$color-text-disabled: #6e6e6e;  // Disabled / low contrast
+$font-size-h3: 32px;
+$font-size-h6: 20px;
+$font-size-h6-sm: 18px;
+$font-size-link: 16px;
+$font-size-button: 20px;
 
-// ===== Accents =====
-$color-accent: #3f8efc;         // Primary accent (buttons, links)
-$color-accent-hover: #5fa1ff;   // Hover accent
-$color-success: #00c896;        // Success green
-$color-warning: #ffb300;        // Warning yellow
-$color-error: #ff4b5c;          // Error red
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 10px;
+$border-radius-xl: 13px;
 
-// ===== Borders and Dividers =====
-$color-border: #333333;
-$color-divider: #2a2a2a;
+$input-height: 52px;
+$btn-height: 55px;
 
-// ===== Shadows =====
-$shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.3);
-$shadow-strong: 0 4px 20px rgba(0, 0, 0, 0.5);
+$transition-fast: all 0.3s;
+$transition-slow: all 1s;

@@ -16,6 +16,7 @@ export class PostsComponent {
     private apiService: ApiServiceService
   ) {}
 
+  users: any[] = [];
   userId: string | null = null;
   allPosts: any[] = [];
   userPosts: any[] = [];
@@ -38,16 +39,32 @@ export class PostsComponent {
         this.allPosts = posts as any[];
       });
     }
+    this.apiService.getUsers().subscribe((users) => {
+      console.log(users);
+      this.users = users as any[];
+    });
   }
 
   //////// Card Toggle 
 
   isExpanded = false;
+  secondOption = false;
 
-  toggleCard(id?: number) {
+  expandedCardTitle
+
+  toggleCard(id?: number, title?: string, body?: string) {
     this.isExpanded = !this.isExpanded;
+    this.secondOption = !this.secondOption;
     this.cardExpanderId = id || null;
 
     console.log('Toggled card with ID:', id);
   }
+
+  //////// user name
+
+  getUserName(userId: number): string {
+  const user = this.users.find(u => u.id === userId);
+  return user ? user.name : 'Unknown';
+}
+
 }

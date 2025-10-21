@@ -3,7 +3,8 @@ header{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 20px;
     color: white;
     background-color: $color-bg-input;
     padding:16px;
@@ -15,6 +16,18 @@ header{
     .date{
         display: flex;
         gap: 12px;
+    }
+    button{
+        border: none;
+        border-radius: 4px;
+        background-color: $color-primary;
+        color: white;
+    }
+    svg{
+        width: 24px;
+        height: 24px;
+        fill: white;
+        cursor: pointer;
     }
 }
 

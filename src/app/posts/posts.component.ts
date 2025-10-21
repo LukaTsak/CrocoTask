@@ -23,25 +23,24 @@ export class PostsComponent {
   cardExpanderId: number | null = null;
 
   ngOnInit() {
+    this.apiService.getUsers().subscribe((users) => {
+      this.users = users as any[];
+    });
+
     this.route.queryParamMap.subscribe((params) => {
       const id = params.get('id');
       this.userId = id;
-      console.log('Query params changed →', { id });
-    });
-    if (this.userId) {
-      this.apiService.getPostsById(Number(this.userId)).subscribe((posts) => {
-        console.log(posts);
-        this.allPosts.push(posts);
-      });
-    } else if (this.userId == null) {
-      this.apiService.getPosts().subscribe((posts) => {
-        console.log(posts);
-        this.allPosts = posts as any[];
-      });
-    }
-    this.apiService.getUsers().subscribe((users) => {
-      console.log(users);
-      this.users = users as any[];
+      this.allPosts = [];
+
+      if (this.userId) {
+        this.apiService.getPostsById(Number(this.userId)).subscribe((posts) => {
+          this.allPosts.push(posts);
+        });
+      } else {
+        this.apiService.getPosts().subscribe((posts) => {
+          this.allPosts = posts as any[];
+        });
+      }
     });
   }
 

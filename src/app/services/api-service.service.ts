@@ -21,4 +21,9 @@ export class ApiServiceService {
     const params = new HttpParams().set('userId', id.toString());
     return this.http.get(`${BASE_URL}/posts`, { params });
   }
+
+  getTodos(id: number){
+    const params = new HttpParams().set('userId', id.toString());
+    return this.http.get(`${BASE_URL}/todos`, { params });
+  }
 }

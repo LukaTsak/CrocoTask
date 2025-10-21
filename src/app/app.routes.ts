@@ -15,5 +15,10 @@ export const routes: Routes = [
         path: 'posts',
         pathMatch: 'full',
         loadComponent: () => import('./posts/posts.component').then(m => m.PostsComponent)
+    },
+    {
+        path: 'todos',
+        pathMatch: 'full',
+        loadComponent: () => import('./todos/todos.component').then(m => m.TodosComponent)
     }
 ];

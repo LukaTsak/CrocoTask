@@ -2,7 +2,9 @@
   <div
     class="post"
     *ngFor="let post of allPosts"
-    (click)="toggleCard(post.id, post.title, post.body, getUserName(post.userId))"
+    (click)="
+      toggleCard(post.id, post.title, post.body, getUserName(post.userId))
+    "
   >
     <div class="username">
       <span class="bolder">Author</span>
@@ -12,11 +14,6 @@
       <span class="bolder">Title</span>
       <span>{{ post.title }}</span>
     </div>
-
-    <!-- <div *ngIf="isExpanded" class="desc">
-      <span class="bolder">Description</span>
-      <span>{{ post.body }}</span>
-    </div> -->
   </div>
 
   <div

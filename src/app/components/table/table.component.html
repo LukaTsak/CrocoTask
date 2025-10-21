@@ -1,39 +1,32 @@
 <main>
-    <table>
-  <!-- <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr> -->
-  <!-- <caption>
-    Users table
-  </caption> -->
-  <tr>
-    <th>Name</th>
-    <!-- <th>Surname</th> -->
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Company name</th>
-    <th>posts</th>
-  </tr>
+  <div class="search">
+    <input [(ngModel)]="filterInput" (input)="search(filterInput)" type="text" placeholder="Search..." />
+  </div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <!-- <th>Surname</th> -->
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Company name</th>
+      <th>posts</th>
+    </tr>
 
-  <tr *ngFor="let user of posts">
-    <td data-cell="name">{{user.name}}</td>
-    <!-- <td data-cell="surname">{{user.name}}</td> -->
-    <td data-cell="phone">{{user.phone}}</td>
-    <td data-cell="email">{{user.email}}</td>
-    <td data-cell="company">{{user.company.name}}</td>
-    <td data-cell="posts"><button [routerLink]="['/posts']" [queryParams]="{ id: user.id }" class="postsButton">Posts</button></td>
-  </tr>
-</table>
+    <tr *ngFor="let user of FilteredUsers">
+      <td data-cell="name">{{ user.name }}</td>
+      <!-- <td data-cell="surname">{{user.name}}</td> -->
+      <td data-cell="phone">{{ user.phone }}</td>
+      <td data-cell="email">{{ user.email }}</td>
+      <td data-cell="company">{{ user.company.name }}</td>
+      <td data-cell="posts">
+        <button
+          [routerLink]="['/posts']"
+          [queryParams]="{ id: user.id }"
+          class="postsButton"
+        >
+          Posts
+        </button>
+      </td>
+    </tr>
+  </table>
 </main>

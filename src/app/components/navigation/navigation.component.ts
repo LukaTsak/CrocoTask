@@ -15,20 +15,17 @@ export class NavigationComponent {
   constructor(private sharedService: SharedService) {}
 
   ngOnInit() {
-    // Subscribe to nav state
     this.sharedService.navState$.subscribe((isOpen) => {
       this.isNavOpen = isOpen;
       console.log('Navigation updated:', isOpen);
     });
 
-    // Initialize based on window size
     this.checkWindowWidth();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkWindowWidth();
-    // this.sharedService.updateValue(this.isNavOpen);
   }
 
   private checkWindowWidth() {
@@ -40,7 +37,6 @@ export class NavigationComponent {
   }
 
   closenav(){
-    // this.isNavOpen = false;
     this.sharedService.updateValue(false);
     console.log('Navigation closed via closenav');
   }

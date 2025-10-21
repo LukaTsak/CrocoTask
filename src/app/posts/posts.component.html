@@ -1,11 +1,10 @@
 <main>
   <div
-    [class.expanded]="isExpanded && cardExpanderId === post.id"
     class="post"
     *ngFor="let post of allPosts"
-    (click)="toggleCard(post.id, post.title, post.body)"
+    (click)="toggleCard(post.id, post.title, post.body, getUserName(post.userId))"
   >
-    <div *ngIf="!isExpanded" class="username">
+    <div class="username">
       <span class="bolder">Author</span>
       <span>{{ getUserName(post.userId) }}</span>
     </div>
@@ -20,20 +19,26 @@
     </div> -->
   </div>
 
-  <!-- <div
-    [class.expanded]="isExpanded && cardExpanderId === post.id"
-    class="expandedCard"
+  <div
+    *ngIf="isExpanded"
+    [class.expanded]="isExpanded && cardExpanderId === this.cardExpanderId"
+    class="post expandedCard"
   >
+    <div class="username">
+      <span class="bolder">Author</span>
+      <span>{{ expandedCardUsername }}</span>
+    </div>
+
     <div class="title">
       <span class="bolder">Title</span>
-      <span>{{ post.title }}</span>
+      <span>{{ expandedCardTitle }}</span>
     </div>
 
     <div *ngIf="isExpanded" class="desc">
       <span class="bolder">Description</span>
-      <span>{{ post.body }}</span>
+      <span>{{ this.expandedCardBody }}</span>
     </div>
-  </div> -->
+  </div>
 
   <div class="overlay" *ngIf="isExpanded" (click)="toggleCard()"></div>
 </main>

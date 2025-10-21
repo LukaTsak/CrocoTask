@@ -45,26 +45,29 @@ export class PostsComponent {
     });
   }
 
-  //////// Card Toggle 
+  //////// Card Toggle
 
   isExpanded = false;
   secondOption = false;
 
-  expandedCardTitle
+  expandedCardTitle: string = '';
+  expandedCardBody: string = '';
+  expandedCardUsername: string = '';
 
-  toggleCard(id?: number, title?: string, body?: string) {
+  toggleCard(id?: number, title?: string, body?: string, username?: string) {
+    this.cardExpanderId = id || null;
+    this.expandedCardTitle = title || '';
+    this.expandedCardBody = body || '';
+    this.expandedCardUsername = username || '';
+
     this.isExpanded = !this.isExpanded;
     this.secondOption = !this.secondOption;
-    this.cardExpanderId = id || null;
-
-    console.log('Toggled card with ID:', id);
   }
 
   //////// user name
 
   getUserName(userId: number): string {
-  const user = this.users.find(u => u.id === userId);
-  return user ? user.name : 'Unknown';
-}
-
+    const user = this.users.find((u) => u.id === userId);
+    return user ? user.name : 'Unknown';
+  }
 }

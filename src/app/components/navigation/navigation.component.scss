@@ -1,16 +1,18 @@
 @use '../../variables.scss' as *;
 .navigation {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   width: 100px;
   height: 100%;
-  background-color: $color-bg-login;
+  background-color: #272831;
   color: white;
   .navigationText {
     width: 100%;
     height: 78px;
+    margin-top: 20px;
     // border: 1px solid black;
 
     span {
@@ -40,11 +42,21 @@
       cursor: pointer;
     }
   }
+  svg{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
 }
 
 @media (max-width: 500px){
     .navigation{
         // display: none;
+        position: absolute;
+        z-index: 1;
     }
 }
 

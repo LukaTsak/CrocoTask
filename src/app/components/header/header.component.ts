@@ -21,9 +21,13 @@ export class HeaderComponent implements OnInit {
     setInterval(() => {
       this.currentDateTime = new Date();
     }, 1000);
-    this.sharedService.currentValue$.subscribe((isNavOpen) => {
-      this.navClosed = !isNavOpen;
-      console.log('Nav state changed:', isNavOpen);
+    this.sharedService.navState$.subscribe((isOpen) => {
+      this.navClosed = !isOpen;
+      console.log('Navigation updated:', isOpen);
     });
+  }
+
+  openTrigger() {
+    this.sharedService.updateValue(true);
   }
 }

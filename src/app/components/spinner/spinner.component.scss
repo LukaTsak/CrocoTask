@@ -9,7 +9,7 @@ main {
   background-color: $color-bg-main;
   .circleDiv {
     position: relative;
-    border: 1px solid red;
+    // border: 1px solid red;
     width: 500px;
     height: 700px;
     display: flex;
@@ -25,7 +25,7 @@ main {
       height: 500px;
       //   transform: rotate(0 ,18deg);
 
-      //   border: 1px solid $color-primary;
+        border: 1px solid $color-primary;
       border-radius: 50%;
       //     background: conic-gradient(
       //     red 0deg 90deg,
@@ -82,7 +82,7 @@ main {
       clip-path: polygon(50% 100%, 0 0, 100% 0);
     }
     .inputDiv {
-      border: 1px solid red;
+    //   border: 1px solid red;
       width: 100%;
       height: fit-content;
       padding: 10px 0px;
@@ -103,11 +103,11 @@ main {
 @media (max-width: 700px) {
   main {
     .circleDiv {
-      width: 300px;
+      width: 280px;
       height: 500px;
       .circle {
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
         .number {
           padding-top: 10px;
         }

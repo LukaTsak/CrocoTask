@@ -1,1 +1,20 @@
-<p>spinner works!</p>
+<main>
+  <div class="circleDiv">
+    <input #sectorInput (input)="log(sectorInput.value)" type="number" />
+    <div id="circle" (click)="randomGenerator(10)" class="circle">
+      <div
+        [ngStyle]="{
+          transform: `rotate(${18 * (i*2+1)}deg)`
+        }"
+        *ngFor="let color of GlobalColors; let i = index"
+        class="number"
+      >
+        <span>{{ i + 1 }}</span>
+      </div>
+      <div (click)="spinWheel()" class="spin">
+        <span>SPIN</span>
+      </div>
+    </div>
+  </div>
+</main>
+// transform: rotate(18deg);

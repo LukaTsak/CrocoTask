@@ -1,0 +1,74 @@
+@use "../../variables.scss" as *;
+main {
+  //   border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $color-bg-main;
+  .circleDiv {
+    border: 1px solid red;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .circle {
+      position: relative;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      width: 500px;
+      height: 500px;
+    //   transform: rotate(0 ,18deg);
+
+      //   border: 1px solid $color-primary;
+      border-radius: 50%;
+      //     background: conic-gradient(
+      //     red 0deg 90deg,
+      //     blue 90deg 180deg,
+      //     green 180deg 270deg,
+      //     yellow 270deg 360deg
+      //   );
+      position: relative;
+      transition: transform 3s cubic-bezier(0.33, 1, 0.68, 1);
+
+      .spin {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        border: 1px solid $color-primary;
+        background-color: $color-primary;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        animation: spin 2s linear infinite;
+
+        span {
+          color: $color-bg-login;
+          font-size: 24px;
+        }
+      }
+      .number {
+        position: absolute;
+        padding-top: 50px;
+        height: 100%;
+        width: fit-content;
+        // border: 1px solid red;
+        color: white;
+        // transform: rotate(18deg);
+        span {
+          font-size: 40px;
+          color: $color-bg-input;
+        }
+      }
+    }
+  }
+}

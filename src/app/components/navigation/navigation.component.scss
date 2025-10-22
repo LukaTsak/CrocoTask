@@ -12,11 +12,12 @@
 
   .selectorLine{
     position: absolute;
-    top: 111px;
+    // top: 111px;
     right: 0;
     height: 35px;
     width: 0px;
     border: 1px solid $color-primary;
+    transform: all 1s;
   }
   .navigationText {
     width: 90%;

@@ -14,10 +14,16 @@ main {
     // border: 1px solid red;
     width: 50%;
     display: flex;
+    flex-wrap: wrap;
     align-items: end;
-    justify-content: end;
+    justify-content: space-between;
     min-width: 749px;
     // width: 665px;
+
+    span{
+      color: white;
+      font-size: 18px;
+    }
 
     input {
       color: white;
@@ -48,6 +54,14 @@ main {
       text-transform: uppercase;
     }
 
+    tr{
+      width: 100%;
+      // border: 1px solid black;
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: space-between;
+    }
+
     th,
     td,
     caption {
@@ -55,11 +69,13 @@ main {
       line-height: 18px;
       padding: 16px;
       .postsButton {
-        max-width: 100px;
+        width: 70px;
+        height: 25px;
+        font-size: 15px;
         background-color: $color-primary;
         border: none;
         border-radius: 8px;
-        color: white;
+        color: $color-bg-login;
         transition: 0.3s all;
         &:hover {
           background-color: $color-primary-light;
@@ -70,7 +86,8 @@ main {
     }
 
     th {
-      text-align: start;
+      width: 100%;
+      text-align: center;
       background-color: #1a1a1a;
     }
 

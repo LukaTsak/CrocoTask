@@ -1,19 +1,29 @@
-@use '../../variables.scss' as *;
+@use "../../variables.scss" as *;
 .navigation {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  width: 100px;
+  width: 130px;
   height: 100%;
   background-color: #272831;
   color: white;
+
+  .selectorLine{
+    position: absolute;
+    top: 111px;
+    right: 0;
+    height: 35px;
+    width: 0px;
+    border: 1px solid $color-primary;
+  }
   .navigationText {
-    width: 100%;
+    width: 90%;
     height: 78px;
     margin-top: 20px;
     // border: 1px solid black;
+    border-bottom: 1px solid $color-primary;
 
     span {
       display: flex;
@@ -31,18 +41,18 @@
       padding: 10px;
       margin-top: 10px;
       margin-bottom: 10px;
-    //   border: 1px solid black;
-    //   border-radius: 10px;
+      //   border: 1px solid black;
+      //   border-radius: 10px;
       width: 60%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    span{
+    span {
       cursor: pointer;
     }
   }
-  svg{
+  svg {
     position: absolute;
     top: 5px;
     right: 10px;
@@ -52,11 +62,11 @@
   }
 }
 
-@media (max-width: 500px){
-    .navigation{
-        // display: none;
-        position: absolute;
-        z-index: 1;
-    }
+@media (max-width: 500px) {
+  .navigation {
+    // display: none;
+    position: absolute;
+    z-index: 1;
+    width: 130px;
+  }
 }
-

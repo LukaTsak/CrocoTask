@@ -1,27 +1,23 @@
 <main>
   <div class="search">
-    <input [(ngModel)]="filterInput" (input)="search(filterInput)" type="text" placeholder="Search..." />
+    <span>Todos</span>
+    <input [(ngModel)]="todoSearch" (input)="search(todoSearch)" type="text" placeholder="Search..." />
   </div>
   <table>
-    <tr>
-      <th>Todos</th>
-    </tr>
 
-    <tr *ngFor="let user of FilteredUsers">
-      <td data-cell="name">{{ user.name }}</td>
-      <td data-cell="phone">{{ user.phone }}</td>
+    <tr [style.background-color]=" todo.completed ? 'green' : '$color-bg-login'" *ngFor="let todo of filteredTodos">
+      <td data-cell="Todo">{{ todo.title }}</td>
+      <!-- <td data-cell="phone">{{ user.phone }}</td>
       <td data-cell="email">{{ user.email }}</td>
-      <td data-cell="company">{{ user.company.name }}</td>
-      <td data-cell="posts">
+      <td data-cell="company">{{ user.company.name }}</td> -->
+      <td data-cell="Completed">
         <button
-          [routerLink]="['/posts']"
-          [queryParams]="{ id: user.id }"
           class="postsButton"
         >
-          Posts
+          {{todo.completed}}
         </button>
       </td>
-      <td data-cell="todos">
+      <!-- <td data-cell="todos">
         <button
           [routerLink]="['/todos']"
           [queryParams]="{ id: user.id }"
@@ -29,7 +25,7 @@
         >
           Todos
         </button>
-      </td>
+      </td> -->
     </tr>
   </table>
 </main>

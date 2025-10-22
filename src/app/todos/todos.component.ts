@@ -24,7 +24,7 @@ export class TodosComponent {
       this.userId = id;
     this.apiService.getTodos(1).subscribe((todos) => {
       this.todos = todos as any[];
-      console.log(this.todos);
+      // console.log(this.todos);
     });
     });
   }

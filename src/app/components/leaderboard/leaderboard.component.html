@@ -1,1 +1,18 @@
-<p>leaderboard works!</p>
+<main>
+  <div class="search">
+    <input [(ngModel)]="filterInput" (input)="search(filterInput)" type="text" placeholder="Search..." />
+  </div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Week</th>
+    </tr>
+
+    <tr *ngFor="let user of FilteredUsers">
+      <td data-cell="name">Luka</td>
+      <td data-cell="Position">3</td>
+      <td data-cell="Week">I</td>
+    </tr>
+  </table>
+</main>

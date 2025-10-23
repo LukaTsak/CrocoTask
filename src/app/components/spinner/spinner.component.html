@@ -1,10 +1,16 @@
 <main>
   <div class="circleDiv">
-    <div class="triangle"></div>
     <div class="inputDiv">
-    <input placeholder="What number to spin to?..." #sectorInput (input)="log(sectorInput.value)" type="number" />
+      <input
+        placeholder="Enter number..."
+        #sectorInput
+        (input)="log(sectorInput.value)"
+        type="number"
+      />
     </div>
     <div id="circle" (click)="randomGenerator(10)" class="circle">
+      <div class="triangle"></div>
+
       <div
         [ngStyle]="{
           transform: `rotate(${18 * (i*2+1)}deg)`

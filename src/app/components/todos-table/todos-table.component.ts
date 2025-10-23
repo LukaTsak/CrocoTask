@@ -6,7 +6,7 @@ import { ApiServiceService } from '../../services/api-service.service';
 
 @Component({
   selector: 'app-todos-table',
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './todos-table.component.html',
   styleUrl: './todos-table.component.scss',
 })

@@ -1,6 +1,6 @@
 @use "../../variables.scss" as *;
 main {
-  //   border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +10,8 @@ main {
   .circleDiv {
     position: relative;
     // border: 1px solid red;
-    width: 500px;
-    height: 700px;
+    width: 50%;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +25,7 @@ main {
       height: 500px;
       //   transform: rotate(0 ,18deg);
 
-        border: 1px solid $color-primary;
+      border: 1px solid $color-primary;
       border-radius: 50%;
       //     background: conic-gradient(
       //     red 0deg 90deg,
@@ -37,13 +37,13 @@ main {
       transition: transform 3s cubic-bezier(0.33, 1, 0.68, 1);
 
       .spin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
         width: 80px;
         height: 80px;
         border: 1px solid $color-primary;
@@ -60,6 +60,7 @@ main {
       .number {
         position: absolute;
         padding-top: 30px;
+        padding-right: 10px;
         height: 100%;
         width: fit-content;
         // border: 1px solid red;
@@ -70,19 +71,20 @@ main {
           color: $color-bg-input;
         }
       }
+      .triangle {
+        position: absolute;
+        z-index: 2;
+        left: 46%;
+        top: -3%;
+        width: 40px;
+        height: 40px;
+        background: $color-primary;
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+      }
     }
-    .triangle {
-      position: absolute;
-      z-index: 2;
-      left: 46%;
-      top: 27%;
-      width: 40px;
-      height: 40px;
-      background: $color-primary;
-      clip-path: polygon(50% 100%, 0 0, 100% 0);
-    }
+
     .inputDiv {
-    //   border: 1px solid red;
+      // border: 1px solid red;
       width: 100%;
       height: fit-content;
       padding: 10px 0px;
@@ -103,18 +105,32 @@ main {
 @media (max-width: 700px) {
   main {
     .circleDiv {
+      width: 80% !important;
       width: 280px;
-      height: 500px;
+      height: 360px;
       .circle {
         width: 280px;
         height: 280px;
         .number {
           padding-top: 10px;
+          padding-right: 0;
+          span {
+            font-size: 30px;
+          }
+        }
+        .triangle {
+          width: 30px;
+          height: 30px;
+          left: 45%;
+          top: -4%;
         }
       }
-      .triangle {
-        left: 44%;
-        top: 36%;
+
+      .inputDiv {
+        input {
+          width: 130px;
+          height: 25px;
+        }
       }
     }
   }

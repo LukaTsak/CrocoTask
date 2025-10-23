@@ -9,10 +9,10 @@
       <th>Week</th>
     </tr>
 
-    <tr *ngFor="let user of FilteredUsers">
-      <td data-cell="name">Luka</td>
-      <td data-cell="Position">3</td>
-      <td data-cell="Week">I</td>
+    <tr *ngFor="let user of leaderboardArr">
+      <td data-cell="name">{{user.loginName}}</td>
+      <td data-cell="Position">{{user.place}}</td>
+      <td data-cell="Week">{{user.week}}</td>
     </tr>
   </table>
 </main>

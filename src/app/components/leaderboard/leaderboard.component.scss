@@ -1,18 +1,23 @@
 @use "../../variables.scss" as *;
 
 main {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: fit-content;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  width: 600px;
+  height: 608px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: $color-bg-main;
-  border: 1px solid red;
+  // border: 1px solid red;
   overflow: hidden;
+  overflow-y: scroll;
+  // scrollbar-color: red orange;
+  scrollbar-width: thin; /* auto | thin | none */
+  // scrollbar-height: 20px;
+  scrollbar-color: $color-primary $color-bg-main; /* thumb color | track color */
 
   .search {
     margin-top: 16px;
@@ -37,8 +42,9 @@ main {
   }
 
   table {
-  border: 1px solid red;
-    height: fit-content;
+    overflow-y: scroll;
+    // border: 1px solid red;
+    height: 500px;
     margin-top: 16px;
     margin-bottom: 16px;
     width: 100%;
@@ -86,10 +92,11 @@ main {
     }
   }
 }
-@media (max-width: 890px) {
+@media (max-width: 1000px) {
   main {
+    // position:static;
     height: auto !important;
-    padding-top: 16px !important;
+    // padding-top: 16px !important;
 
     .search {
       width: 80% !important;
@@ -98,28 +105,35 @@ main {
 
     table {
       width: 80% !important;
-      min-width: 348px;
-    }
-  }
-  th {
-    display: none;
-  }
-  td {
-    display: grid;
-    grid-template-columns: 15ch auto;
-    gap: 4px;
-    padding: 12px !important;
+      // min-width: 348px;
+      th,
+      td,
+      caption {
+        font-size: 14px;
+        line-height: 5px;
+        padding: 16px;
+      }
+      th {
+        display: none;
+      }
+      td {
+        display: grid;
+        grid-template-columns: 15ch auto;
+        gap: 4px;
+        padding: 12px !important;
 
-    &:before {
-      content: attr(data-cell) ": ";
-      font-weight: 700;
-      text-transform: capitalize;
-    }
-    &:first-child {
-      padding-top: 16px !important;
-    }
-    &:last-child {
-      padding-bottom: 16px !important;
+        &:before {
+          content: attr(data-cell) ": ";
+          font-weight: 700;
+          text-transform: capitalize;
+        }
+        &:first-child {
+          padding-top: 16px !important;
+        }
+        &:last-child {
+          padding-bottom: 16px !important;
+        }
+      }
     }
   }
 }

@@ -94,7 +94,7 @@ main {
     text-align: start;
     padding-left: 30px;
     font-size: 30px;
-    background-color: #1A1A1A;
+    background-color: #1a1a1a;
     padding: 10px 0px 10px 30px;
 
     span {
@@ -112,8 +112,15 @@ main {
     }
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1300px){
+  main{
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 770px) {
   main {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
     // position:static;
     width: fit-content;
     height: 608px;

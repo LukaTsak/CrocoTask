@@ -44,7 +44,24 @@ export class LeaderboardComponent {
         Math.floor(Math.random() * (15 - 5 + 1) + 5)
       );
       const place = Math.floor(Math.random() * Quantity);
-      const week = weekTypes[Math.floor(Math.random() * weekTypes.length)];
+
+      let weekIndex = 0;
+
+      if (i < 10) {
+        weekIndex = 0;
+      } else if (i < 20) {
+        weekIndex = 1;
+      } else if (i < 30) {
+        weekIndex = 2;
+      } else if (i < 40) {
+        weekIndex = 3;
+      } else {
+        weekIndex = Math.floor(Math.random() * weekTypes.length);
+      }
+
+      console.log(weekIndex)
+
+      const week = weekTypes[weekIndex];
 
       this.leaderboardArr.push({
         customerId: customerId,

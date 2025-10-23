@@ -90,6 +90,8 @@ main {
     }
 
     .inputDiv {
+      display: flex;
+      justify-content: center;
       // border: 1px solid red;
       width: 100%;
       height: fit-content;

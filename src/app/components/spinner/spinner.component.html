@@ -1,5 +1,10 @@
 <main>
   <div class="circleDiv">
+    <div class="triangle"></div>
+    <div (click)="spinWheel()" class="spin">
+      <span>SPIN</span>
+    </div>
+
     <div class="inputDiv">
       <input
         placeholder="Enter number..."
@@ -9,8 +14,6 @@
       />
     </div>
     <div id="circle" (click)="randomGenerator(10)" class="circle">
-      <div class="triangle"></div>
-
       <div
         [ngStyle]="{
           transform: `rotate(${18 * (i*2+1)}deg)`
@@ -19,9 +22,6 @@
         class="number"
       >
         <span>{{ i + 1 }}</span>
-      </div>
-      <div (click)="spinWheel()" class="spin">
-        <span>SPIN</span>
       </div>
     </div>
   </div>

@@ -1,12 +1,14 @@
 @use "../variables.scss" as *;
 main {
   display: flex;
+  gap: 50px;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  // justify-content: space-around;
   flex-direction: row;
   position: relative;
-    border: 1px solid red;
+    // border: 1px solid red;
 //   display: flex;
 //   align-items: center;
 //   justify-content: center;

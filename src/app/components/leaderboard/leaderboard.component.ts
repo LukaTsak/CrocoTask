@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './leaderboard.component.scss',
 })
 export class LeaderboardComponent {
-  Users: any[] = [];
-  FilteredUsers: any[] = [];
+  leaderboardArr: any[] = [];
+  tempLeaderboardArr: any[] = [];
   filterInput = '';
 
   constructor(private apiService: ApiServiceService) {}
@@ -21,29 +21,28 @@ export class LeaderboardComponent {
     this.generateObj(50);
   }
 
-  search(searchItem: string = '') {
-    const term = searchItem.toLowerCase().trim();
-    console.log('Searching:', term);
+  // search(searchItem: string = '') {
+  //   const term = searchItem.toLowerCase().trim();
+  //   console.log('Searching:', term);
 
-    if (!term) {
-      this.FilteredUsers = [...this.Users];
-      return;
-    }
+  //   if (!term) {
+  //     this.filteredLeaderboardArr = [...this.leaderboardArr];
+  //     return;
+  //   }
 
-    this.FilteredUsers = this.Users.filter(
-      (user) =>
-        user.name.toLowerCase().includes(term) ||
-        user.email.toLowerCase().includes(term)
-    );
-  }
-
-  leaderboardArr: any = [];
+  //   this.filteredLeaderboardArr = this.leaderboardArr.filter(
+  //     (user) =>
+  //       user.loginName.toLowerCase().includes(term)
+  //   );
+  // }
 
   generateObj(Quantity: number) {
     for (let i = 0; i < Quantity; i++) {
       const weekTypes = ['I', 'II', 'III', 'IV'];
       const customerId = i + 1;
-      const loginName = this.generateRandString(Math.floor(Math.random() * (15 - 5 + 1) + 5));
+      const loginName = this.generateRandString(
+        Math.floor(Math.random() * (15 - 5 + 1) + 5)
+      );
       const place = Math.floor(Math.random() * Quantity);
       const week = weekTypes[Math.floor(Math.random() * weekTypes.length)];
 
@@ -55,6 +54,7 @@ export class LeaderboardComponent {
       });
       // console.log(this.leaderboardArr);
     }
+    this.tempLeaderboardArr = this.leaderboardArr;
   }
 
   generateRandString(length: number) {
@@ -64,7 +64,19 @@ export class LeaderboardComponent {
     for (let i = 0; i <= length; i++) {
       string += characters[Math.floor(Math.random() * characters.length)];
     }
-    console.log(string);
+    // console.log(string);
     return string;
+  }
+
+  searchByWeek(str: string) {
+    if (str === 'ALL') {
+      this.tempLeaderboardArr = [...this.leaderboardArr];
+    } else {
+      let filteredArr = [...this.leaderboardArr].filter(
+        (el) => el.week === str
+      );
+      console.log(filteredArr);
+      this.tempLeaderboardArr = filteredArr;
+    }
   }
 }

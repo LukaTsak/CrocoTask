@@ -1,7 +1,18 @@
 <main>
-  <div class="search">
+    <div class="leaderboardname"> <span>Leaderboard</span></div>
+    <div class="filters">
+         <!-- <span>Filters: </span> -->
+         <span (click)="searchByWeek('I')">I</span>
+         <span (click)="searchByWeek('II')">II</span>
+         <span (click)="searchByWeek('III')">III</span>
+         <span (click)="searchByWeek('IV')">IV</span>
+         <span (click)="searchByWeek('ALL')" >ALL</span>
+
+        </div>
+
+  <!-- <div class="search">
     <input [(ngModel)]="filterInput" (input)="search(filterInput)" type="text" placeholder="Search..." />
-  </div>
+  </div> -->
   <table>
     <tr>
       <th>Name</th>
@@ -9,7 +20,7 @@
       <th>Week</th>
     </tr>
 
-    <tr *ngFor="let user of leaderboardArr">
+    <tr *ngFor="let user of tempLeaderboardArr">
       <td data-cell="name">{{user.loginName}}</td>
       <td data-cell="Position">{{user.place}}</td>
       <td data-cell="Week">{{user.week}}</td>

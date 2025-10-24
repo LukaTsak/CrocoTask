@@ -16,7 +16,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.apiService.getUsers().subscribe((posts) => {
-      console.log(posts);
+      // console.log(posts);
       this.posts = posts as any[];
     });
   }

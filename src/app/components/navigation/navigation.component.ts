@@ -23,7 +23,7 @@ export class NavigationComponent {
   ngOnInit() {
     this.sharedService.navState$.subscribe((isOpen) => {
       this.isNavOpen = isOpen;
-      console.log('Navigation updated:', isOpen);
+      // console.log('Navigation updated:', isOpen);
     });
 
     this.checkWindowWidth();
@@ -32,24 +32,24 @@ export class NavigationComponent {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
         this.currentRoute = event.url;
-        console.log('Current route:', this.currentRoute);
+        // console.log('Current route:', this.currentRoute);
 
         if (this.currentRoute === '/users') {
           this.displayLine = true;
           this.lineFromTop = '111';
-          console.log('users');
+          // console.log('users');
         } else if (this.currentRoute === '/posts') {
           this.displayLine = true;
           this.lineFromTop = '178';
 
-          console.log('posts');
+          // console.log('posts');
         } else if (this.currentRoute === '/sales') {
           this.displayLine = true;
           this.lineFromTop = '245';
-          console.log('posts');
+          // console.log('posts');
         } else {
           this.displayLine = false;
-          console.log('other page:', this.currentRoute);
+          // console.log('other page:', this.currentRoute);
         }
       });
   }

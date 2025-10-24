@@ -32,7 +32,7 @@ export class SpinnerComponent {
       const color = colors[i];
       gradient += `${color} ${start}deg ${end}deg${i < n - 1 ? ', ' : ''}`;
     }
-    console.log(`conic-gradient(${gradient})`);
+    // console.log(`conic-gradient(${gradient})`);
     return `conic-gradient(${gradient})`;
   }
 

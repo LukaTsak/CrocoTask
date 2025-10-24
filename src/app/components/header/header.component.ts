@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
     }, 1000);
     this.sharedService.navState$.subscribe((isOpen) => {
       this.navClosed = !isOpen;
-      console.log('Navigation updated:', isOpen);
+      // console.log('Navigation updated:', isOpen);
     });
   }
 

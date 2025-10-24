@@ -20,7 +20,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getUsers().subscribe((Users) => {
-      console.log(Users);
+      // console.log(Users);
       this.Users = Users as any[];
       this.FilteredUsers = [...this.Users];
     });

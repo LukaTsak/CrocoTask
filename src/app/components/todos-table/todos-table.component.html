@@ -5,6 +5,11 @@
   </div>
   <table>
 
+    <tr>
+      <th>Task</th>
+      <th>Completed</th>
+    </tr>
+
     <tr [style.background-color]=" todo.completed ? '#2E744A' : '$color-bg-login'" *ngFor="let todo of filteredTodos">
       <td data-cell="Todo">{{ todo.title }}</td>
       <td data-cell="Completed">

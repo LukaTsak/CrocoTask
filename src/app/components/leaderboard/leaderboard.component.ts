@@ -20,7 +20,7 @@ export class LeaderboardComponent {
   ngOnInit() {
     this.generateObj(50);
   }
-  
+
   generateObj(Quantity: number) {
     for (let i = 0; i < Quantity; i++) {
       const weekTypes = ['I', 'II', 'III', 'IV'];
@@ -44,7 +44,7 @@ export class LeaderboardComponent {
         weekIndex = Math.floor(Math.random() * weekTypes.length);
       }
 
-      console.log(weekIndex)
+      // console.log(weekIndex)
 
       const week = weekTypes[weekIndex];
 

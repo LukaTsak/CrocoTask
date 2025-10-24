@@ -1,6 +1,5 @@
 @use "../../variables.scss" as *;
 main {
-  // border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,8 +8,6 @@ main {
   background-color: $color-bg-main;
   position: relative;
   .circleDiv {
-    // position: relative;
-    // border: 1px solid red;
     width: 50%;
     height: 600px;
     display: flex;
@@ -18,43 +15,28 @@ main {
     align-items: center;
     justify-content: space-between;
     .circle {
-      // position: relative;
       display: flex;
       align-self: center;
       justify-content: center;
       width: 500px;
       height: 500px;
-      //   transform: rotate(0 ,18deg);
-
-      // border: 1px solid $color-primary;
       border-radius: 50%;
-      //     background: conic-gradient(
-      //     red 0deg 90deg,
-      //     blue 90deg 180deg,
-      //     green 180deg 270deg,
-      //     yellow 270deg 360deg
-      //   );
       position: relative;
       transition: transform 3s cubic-bezier(0.33, 1, 0.68, 1);
 
-      .number {
+    .number {
         display: flex;
         align-items: start;
         justify-content: center;
         position: absolute;
         padding-top: 30px;
-        // padding-right: 10px;
         height: 94%;
         width: fit-content;
-        // border: 1px solid red;
-        // color: white;
-        // transform: rotate(18deg);
         span {
           font-size: 40px;
           color: $color-bg-input;
-          // color: white;
         }
-      }
+    }
     }
     .triangle {
       position: absolute;
@@ -92,7 +74,6 @@ main {
     .inputDiv {
       display: flex;
       justify-content: center;
-      // border: 1px solid red;
       width: 100%;
       height: fit-content;
       padding: 10px 0px;
@@ -121,18 +102,11 @@ main {
       width: 80% !important;
       width: 280px;
       height: 360px;
-      // border: 1px solid red;
-        // overflow: hidden;
-
-
       .circle {
-        // border: 1px solid red;
         overflow: hidden;
-
         width: 265px;
         height: 265px;
         .number {
-          // border: 1px solid red;
           padding-top: 10px;
           padding-right: 0;
           span {

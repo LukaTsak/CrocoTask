@@ -3,8 +3,8 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class SharedService {
-  private navStateSource = new BehaviorSubject<boolean>(true); // true = nav open
-  navState$ = this.navStateSource.asObservable(); // <-- this is what NavigationComponent subscribes to
+  private navStateSource = new BehaviorSubject<boolean>(true);
+  navState$ = this.navStateSource.asObservable();
 
   updateValue(isOpen: boolean) {
     this.navStateSource.next(isOpen);

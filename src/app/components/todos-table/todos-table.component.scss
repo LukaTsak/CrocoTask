@@ -11,14 +11,12 @@ main {
 
   .search {
     margin-top: 16px;
-    // border: 1px solid red;
     width: 50%;
     display: flex;
     flex-wrap: wrap;
     align-items: end;
     justify-content: space-between;
     min-width: 749px;
-    // width: 665px;
 
     span{
       color: white;
@@ -30,7 +28,6 @@ main {
       background-color: $color-bg-input;
       border: 1px solid $color-border;
       outline: none;
-      // border: none;
       border-radius: 4px;
       padding-left: 10px;
     }
@@ -56,10 +53,6 @@ main {
 
     tr{
       width: 100%;
-      // border: 1px solid black;
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: space-between;
     }
 
     th,

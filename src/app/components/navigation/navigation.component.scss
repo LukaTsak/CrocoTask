@@ -12,7 +12,6 @@
 
   .selectorLine{
     position: absolute;
-    // top: 111px;
     right: 0;
     height: 35px;
     width: 0px;
@@ -23,7 +22,6 @@
     width: 90%;
     height: 78px;
     margin-top: 20px;
-    // border: 1px solid black;
     border-bottom: 1px solid $color-primary;
 
     span {
@@ -37,13 +35,10 @@
   .options {
     display: flex;
     flex-direction: column;
-    // gap: 10px;
     .option {
       padding: 10px;
       margin-top: 10px;
       margin-bottom: 10px;
-      //   border: 1px solid black;
-      //   border-radius: 10px;
       width: 60%;
       display: flex;
       align-items: center;
@@ -65,7 +60,6 @@
 
 @media (max-width: 500px) {
   .navigation {
-    // display: none;
     position: absolute;
     z-index: 1;
     width: 130px;

@@ -40,15 +40,11 @@ export class NavigationComponent {
           console.log('users');
         } else if (this.currentRoute === '/posts') {
           this.displayLine = true;
-          // let temp = Number(this.lineFromTop) + this.addTop;
-          // this.lineFromTop = temp.toString();
           this.lineFromTop = '178';
 
           console.log('posts');
         } else if (this.currentRoute === '/sales') {
           this.displayLine = true;
-          // let temp = Number(this.lineFromTop) + this.addTop;
-          // this.lineFromTop = temp.toString();
           this.lineFromTop = '245';
           console.log('posts');
         } else {

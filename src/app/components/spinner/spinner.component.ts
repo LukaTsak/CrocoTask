@@ -23,7 +23,7 @@ export class SpinnerComponent {
   GlobalColors: string[] = [];
 
   createCircleSectors(n: number, colors: string[]): string {
-    const step = 360 / n; // angle per sector
+    const step = 360 / n;
     let gradient = '';
 
     for (let i = 0; i < n; i++) {
@@ -50,10 +50,9 @@ export class SpinnerComponent {
   log(a: string) {
     console.log(a);
     this.numberToStopon = Number(a);
-    // console.log('aa');
   }
 
-  currentRotation = 0; // property in component
+  currentRotation = 0;
 
   spinWheel() {
     const sectorInput = this.numberToStopon;

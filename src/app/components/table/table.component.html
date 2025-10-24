@@ -5,7 +5,6 @@
   <table>
     <tr>
       <th>Name</th>
-      <!-- <th>Surname</th> -->
       <th>Phone</th>
       <th>Email</th>
       <th>Company name</th>
@@ -15,7 +14,6 @@
 
     <tr *ngFor="let user of FilteredUsers">
       <td data-cell="name">{{ user.name }}</td>
-      <!-- <td data-cell="surname">{{user.name}}</td> -->
       <td data-cell="phone">{{ user.phone }}</td>
       <td data-cell="email">{{ user.email }}</td>
       <td data-cell="company">{{ user.company.name }}</td>

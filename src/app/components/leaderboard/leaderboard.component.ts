@@ -20,22 +20,7 @@ export class LeaderboardComponent {
   ngOnInit() {
     this.generateObj(50);
   }
-
-  // search(searchItem: string = '') {
-  //   const term = searchItem.toLowerCase().trim();
-  //   console.log('Searching:', term);
-
-  //   if (!term) {
-  //     this.filteredLeaderboardArr = [...this.leaderboardArr];
-  //     return;
-  //   }
-
-  //   this.filteredLeaderboardArr = this.leaderboardArr.filter(
-  //     (user) =>
-  //       user.loginName.toLowerCase().includes(term)
-  //   );
-  // }
-
+  
   generateObj(Quantity: number) {
     for (let i = 0; i < Quantity; i++) {
       const weekTypes = ['I', 'II', 'III', 'IV'];
@@ -85,7 +70,10 @@ export class LeaderboardComponent {
     return string;
   }
 
+  activeWeek:string = 'ALL'
   searchByWeek(str: string) {
+    this.activeWeek = str
+
     if (str === 'ALL') {
       this.tempLeaderboardArr = [...this.leaderboardArr];
     } else {

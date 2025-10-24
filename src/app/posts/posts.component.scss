@@ -1,9 +1,6 @@
 @use '../variables.scss' as *;
 main {
   padding: 20px;
-  //   min-width: 100%;
-  //   width: fit-content;
-  // min-height: 100vh;
   min-height: fit-content;
   height: auto;
   background-color: $color-bg-main;
@@ -21,12 +18,18 @@ main {
     text-align: center;
     width: 339px;
     height: 330px;
-    // border: 1px solid red;
     border-radius: 8px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+      transition: all 0.3s;
+
+
+    &:hover{
+      scale: 1.03;
+      transition: all 0.3s;
+    }
     span {
       padding: 2px;
       display: flex;

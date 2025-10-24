@@ -5,11 +5,8 @@
   </div>
   <table>
 
-    <tr [style.background-color]=" todo.completed ? 'green' : '$color-bg-login'" *ngFor="let todo of filteredTodos">
+    <tr [style.background-color]=" todo.completed ? '#2E744A' : '$color-bg-login'" *ngFor="let todo of filteredTodos">
       <td data-cell="Todo">{{ todo.title }}</td>
-      <!-- <td data-cell="phone">{{ user.phone }}</td>
-      <td data-cell="email">{{ user.email }}</td>
-      <td data-cell="company">{{ user.company.name }}</td> -->
       <td data-cell="Completed">
         <button
           class="postsButton"
@@ -17,15 +14,6 @@
           {{todo.completed}}
         </button>
       </td>
-      <!-- <td data-cell="todos">
-        <button
-          [routerLink]="['/todos']"
-          [queryParams]="{ id: user.id }"
-          class="postsButton"
-        >
-          Todos
-        </button>
-      </td> -->
     </tr>
   </table>
 </main>
